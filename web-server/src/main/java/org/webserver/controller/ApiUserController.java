@@ -5,8 +5,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.webserver.controller.service.ApiUserService;
+import org.webserver.other.MeterHttpClient;
 
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.List;
 
 @RestController
@@ -26,7 +29,10 @@ public class ApiUserController {
     }
 
     @GetMapping("/test")
-    public String test(){
-        return "test";
+    public String test() throws IOException {
+
+        MeterHttpClient meter = new MeterHttpClient();
+        meter.get_test();
+        return meter.get_meter_data_by_http("1","p1");
     }
 }

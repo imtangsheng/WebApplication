@@ -74,3 +74,6 @@ GRANT ALL ON 表示所有权限，% 表示通配所有 host，可以访问远程
 - 5.访问数据库
 
 ### [Spring Boot MySQL 教程](https://geek-docs.com/spring-boot/spring-boot-tutorials/mysql.html)
+参考教程
+
+## 使用HTTP
